@@ -1,0 +1,26 @@
+version: "3.9"
+services:
+  app:
+    build: .
+    command: python -u Publisher3.py
+    ports:
+      - "7000:7000"
+    volumes:
+      - .:/app
+    #links:
+    #  - mongodb
+
+  #mongodb:
+  #  image: mongo
+  #  container_name : mongodb1
+    
+    
+  #  environment:
+  #    - MONGO_INITDB_DATABASE=test_db
+  #    - MONGO_INITDB_ROOT_USERNAME=root
+  #    - MONGO_INITDB_ROOT_PASSWORD=pass
+  #  volumes:
+  #    - ./init-db.js:/docker-entrypoint-initdb.d/init-db.js:ro
+    
+  #  ports:
+  #    - 3000:3000

@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  app:
+    build: .
+    command: python -u subscriber.py
+    ports:
+      - "8081:5000"
+    volumes:
+      - .:/app

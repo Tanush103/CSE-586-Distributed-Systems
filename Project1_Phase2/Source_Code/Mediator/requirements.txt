@@ -1,0 +1,4 @@
+websockets
+pymongo[srv]
+certifi
+asyncio

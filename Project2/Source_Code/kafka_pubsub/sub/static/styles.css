@@ -1,0 +1,14 @@
+body{
+    background-color: lightblue;
+}
+.Heading{
+    font-family: Helvetica;
+    text-align: center;
+}
+.Topics{
+    float: left;
+}
+.Notifications{
+    float: left;
+    /*margin-left: 400px;*/
+}

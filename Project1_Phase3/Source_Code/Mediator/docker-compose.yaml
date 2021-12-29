@@ -1,0 +1,31 @@
+version: "3.9"
+services:
+  app:
+    build: ./mediator1
+    command: python -u getMongo.py
+    command: python -u mediator.py
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app
+    
+    
+  app1:
+    build: ./mediator2
+    command: python -u getMongo.py
+    command: python -u mediator.py
+    ports:
+      - "6000:6000"
+    volumes:
+      - .:/app1
+      
+  app2:
+    build: ./mediator3
+    command: python -u getMongo.py
+    command: python -u mediator.py
+    ports:
+      - "7000:7000"
+    volumes:
+      - .:/app2
+  
+  

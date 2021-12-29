@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Subscription Page</title>
+        <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.8/socket.io.min.js">-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $('a#testaction').on('click', function(e) {
+                    e.preventDefault()
+                    $.getJSON('/subAction',function(data) {
+                        //do nothing
+                    });
+                     return false;
+                });
+                $('a#testcomedy').on('click', function(e) {
+                    e.preventDefault()
+                    $.getJSON('/subComedy',function(data) {
+                        //do nothing
+                    });
+                     return false;
+                });
+                $('a#testcrime').on('click', function(e) {
+                    e.preventDefault()
+                    $.getJSON('/subCrime',function(data) {
+                        //do nothing
+                    });
+                     return false;
+                });
+                $('a#testdrama').on('click', function(e) {
+                    e.preventDefault()
+                    $.getJSON('/subDrama',function(data) {
+                        //do nothing
+                    });
+                     return false;
+                });
+            });
+        </script>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"/>
+        <!--
+        <style>
+            body {background-color: lightblue;}
+            h1 {font: Arial; text-align: center;}
+        </style>
+    -->
+    </head>
+    <body>
+        
+        <h1 class="Heading">Manage Subscriptions</h1>
+        </br>
+        <div class="Topics">
+            <h1 class="Subheading1">Select Movie Topics</h1>
+            <h3>Action</h3>
+            <form>
+                <a href="#" id="testaction">
+                    <button>Subscribe</button>
+                </a>
+                <button id="unsub1">Unsubscribe</button>
+            </form>
+            <br>
+            <h3>Comedy</h3>
+            <form>
+                <a href="#" id="testcomedy">
+                    <button>Subscribe</button>
+                </a>
+                <button>Unsubscribe</button>
+            </form>
+            
+            
+            
+            <br>
+            <h3>Crime</h3>
+            <form>
+                <a href="#" id="testcrime">
+                    <button>Subscribe</button>
+                </a>
+                <button>Unsubscribe</button>
+            </form>
+            
+            
+            <br>
+            <h3>Drama</h3>
+            <form>
+                <a href="#" id="testdrama">
+                    <button>Subscribe</button>
+                </a>
+                <button>Unsubscribe</button>
+            </form>
+            
+            
+        </div>
+        </body>
+</html>

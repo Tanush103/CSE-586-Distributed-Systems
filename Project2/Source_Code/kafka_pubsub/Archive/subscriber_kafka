@@ -1,0 +1,26 @@
+import websockets
+import asyncio
+import json
+from flask import Flask, render_template, request
+from kafka import KafkaConsumer
+
+#consumer = KafkaConsumer(bootstrap_servers=['127.0.0.1:9092','127.0.0.1:9093','127.0.0.1:9094','127.0.0.1:9095'], value_serializer=json_serializer)
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+
+@app.route('/subAction')
+def callbackaction():
+    consumer = KafkaConsumer('test_topic',bootstrap_servers=['127.0.0.1:9092','127.0.0.1:9093','127.0.0.1:9094','127.0.0.1:9095'])
+    for message in consumer:
+        print(message.value)
+    
+    
+
+
+if __name__ == '__main__':
+    app.run(host = '0.0.0.0', port = 5000,debug=True,use_reloader=False)

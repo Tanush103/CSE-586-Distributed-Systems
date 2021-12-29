@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Subscription Page</title>
+        <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.8/socket.io.min.js">-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        
+        <script type="text/javascript">
+            $(function() {
+                $('a#subaction').on('click', function(e) {
+                    e.preventDefault()
+                    $.getJSON('/subAction',function(data) {
+                        //do nothing
+                    });
+                     return false;
+                });
+                $('a#subcomedy').on('click', function(e) {
+                    e.preventDefault()
+                    $.getJSON('/subComedy',function(data) {
+                        //do nothing
+                    });
+                     return false;
+                });
+                $('a#subcrime').on('click', function(e) {
+                    e.preventDefault()
+                    $.getJSON('/subCrime',function(data) {
+                        //do nothing
+                    });
+                     return false;
+                });
+                $('a#subdrama').on('click', function(e) {
+                    e.preventDefault()
+                    $.getJSON('/subDrama',function(data) {
+                        //do nothing
+                    });
+                     return false;
+                });
+                $('a#subscifi').on('click', function(e) {
+                    e.preventDefault()
+                    $.getJSON('/subSciFi',function(data) {
+                        //do nothing
+                    });
+                     return false;
+                });
+                $('a#subfantasy').on('click', function(e) {
+                    e.preventDefault()
+                    $.getJSON('/subFantasy',function(data) {
+                        //do nothing
+                    });
+                     return false;
+                });
+                $('a#subfamily').on('click', function(e) {
+                    e.preventDefault()
+                    $.getJSON('/subFamily',function(data) {
+                        //do nothing
+                    });
+                     return false;
+                });
+                $('a#subthriller').on('click', function(e) {
+                    e.preventDefault()
+                    $.getJSON('/subThriller',function(data) {
+                        //do nothing
+                    });
+                     return false;
+                });
+                $('a#subadventure').on('click', function(e) {
+                    e.preventDefault()
+                    $.getJSON('/subAdventure',function(data) {
+                        //do nothing
+                    });
+                     return false;
+                });
+                $('a#submusical').on('click', function(e) {
+                    e.preventDefault()
+                    $.getJSON('/subMusical',function(data) {
+                        //do nothing
+                    });
+                     return false;
+                });
+                $('a#subactionscifi').on('click', function(e) {
+                    e.preventDefault()
+                    $.getJSON('/subActionSciFi',function(data) {
+                        //do nothing
+                    });
+                     return false;
+                });
+                $('a#submusicaldrama').on('click', function(e) {
+                    e.preventDefault()
+                    $.getJSON('/subMusicalDrama',function(data) {
+                        //do nothing
+                    });
+                     return false;
+                });
+                
+                
+            });
+        </script>
+        <link rel="stylesheet" href="{{ url_for('static', filename='../static/styles.css') }}"/>
+        <!--<link rel="stylesheet" href="../static/styles.css"/>-->
+        <!--
+        <style>
+            body {background-color: lightblue;}
+            h1 {font: Arial; text-align: center;}
+        </style>
+    -->
+    </head>
+    <body>
+        <h1 class="Heading">Movie Subscriptions</h1>
+        </br>
+        <h1 class="Subheading1">Select Movies</h1>
+        <div class="Topics-row-1" style="display:flex; flex-direction: row;">
+            <div class="action" style="margin-right:50px">
+                <h3>Action</h3>
+                <img src="static/johnwick2.jpg" alt="John Wick 2" width="300" height="400">
+                <form>
+                    <a href="#" id="subaction">
+                        <button id="subAction" name="Action">Subscribe</button>
+                    </a>
+                    
+                </form>
+            </div>
+            <br>
+            <div class="comedy" style="margin-right:50px">
+            <h3>Comedy</h3>
+                <img src="static/thehangover.jpg" alt="The Hangover" width="300" height="400"><br>
+                <form>
+                    <a href="#" id="subcomedy">
+                        <button id="subComedy" name="Comedy">Subscribe</button>
+                    </a>
+                    
+                </form>
+            </div>
+            <br>
+            <div class="crime" style="margin-right:50px">
+                <h3>Crime</h3>
+                <img src="static/goodfellas.jpg" alt="Goodfellas" width="300" height="400">
+                <form>
+                    <a href="#" id="subcrime">
+                        <button id="subCrime" name="Crime">Subscribe</button>
+                    </a>
+                    
+                </form>
+            </div>
+            <br>
+            <div class="drama" style="margin-right:50px">
+                <h3>Drama</h3>
+                <img src="static/spotlight.jpg" alt="Spotlight" width="300" height="400">
+                <form>
+                    <a href="#" id="subdrama">
+                        <button id="subDrama" name="Drama">Subscribe</button>
+                    </a>
+                    
+                </form>
+            </div>
+        </div>
+        <div class="Topics-row-2" style="display:flex; flex-direction: row;">
+            <div class="scifi" style="margin-right:50px">
+                <h3>Sci-Fi</h3>
+                <img src="static/terminator-dark-fate-poster_1565974186.jpg" alt="Terminator" width="300" height="400">
+                <form>
+                    <a href="#" id="subscifi">
+                        <button id="subScifi" name="Scifi">Subscribe</button>
+                    </a>
+                    
+                </form>
+            </div>
+            <br>
+            <div class="adventure" style="margin-right:50px">
+                <h3>Adventure</h3>
+                <img src="static/junglecruise.jpeg" alt="Jungle Cruise" width="300" height="400">
+                <form>
+                    <a href="#" id="subadventure">
+                        <button id="subAdventure" name="Adventure">Subscribe</button>
+                    </a>
+                    
+                </form>
+            </div>
+            <br>
+            <div class="family" style="margin-right:50px">
+                <h3>Family</h3>
+                <img src="static/we-are-family-movie-poster-2016-1020775866.jpg" alt="Family" width="300" height="400">
+                <form>
+                    <a href="#" id="subfamily">
+                        <button id="subFamily" name="Family">Subscribe</button>
+                    </a>
+                    
+                </form>
+            </div>
+            <br>
+            <div class="fantasy" style="margin-right:50px">
+                <h3>Fantasy</h3>
+                <img src="static/lotr.jpeg" alt="1917Stunner" width="300" height="400">
+                <form>
+                    <a href="#" id="subfantasy">
+                        <button id="subFantasy" name="Lord oF The Rings">Subscribe</button>
+                    </a>
+                    
+                </form>
+            </div>
+        </div>
+        <div class="Topics-row-3" style="display:flex; flex-direction: row;">
+            <div class="musical" style="margin-right:50px">
+                <h3>Musical</h3>
+                <img src="static/high-school-musical-the-musical-the-series-movie-poster-md.jpg" alt="HighSchoolMusical" width="300" height="400">
+                <form>
+                    <a href="#" id="submusical">
+                        <button id="subMusical" name="Musical">Subscribe</button>
+                    </a>
+                    
+                </form>
+            </div>
+            <div class="thriller" style="margin-right:50px">
+                <h3>Thriller</h3>
+                <img src="static/dark_waters-eclipse-900x0-c-default.jpg" alt="DarkWaters" width="300" height="400">
+                <form>
+                    <a href="#" id="subthriller">
+                        <button id="subThriller" name="Thriller">Subscribe</button>
+                    </a>
+                    
+                </form>
+            </div>
+            <div class="action-scifi" style="margin-right:50px">
+                <h3>Action Scifi</h3>
+                <img src="static/dune.jpeg" alt="Dune" width="300" height="400">
+                <form>
+                    <a href="#" id="subactionscifi">
+                        <button id="#subactionscifi" name="Action Sci-Fi">Subscribe</button>
+                    </a>
+                    
+                </form>
+            </div>
+            <div class="musical-drama" style="margin-right:50px">
+                <h3>Musical Drama</h3>
+                <img src="static/lalaland.jpeg" alt="Dune" width="300" height="400">
+                <form>
+                    <a href="#" id="submusicaldrama">
+                        <button id="#submusicaldrama" name="Musical Drama">Subscribe</button>
+                    </a>
+                    
+                </form>
+            </div>
+        </div>
+        <div class="Notifications">
+            <h1 class="Subheading2">My Movies</h1>
+            <textarea id="w3review" name="w3review" rows="20" cols="70">{{list1}}</textarea>
+        </div>
+    </body>
+</html>
